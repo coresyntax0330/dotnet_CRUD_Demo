@@ -1,0 +1,29 @@
+# Build results
+bin/
+obj/
+out/
+
+# NuGet packages
+*.nupkg
+*.snupkg
+# The packages folder can be ignored because of restore
+**/packages/*
+!**/packages/build/
+
+# Visual Studio files
+.vs/
+*.user
+*.suo
+
+# Rider / JetBrains
+.idea/
+
+# Logs
+*.log
+
+# Config transforms
+appsettings.*.json
+
+# Other files
+*.db
+*.db-journal
