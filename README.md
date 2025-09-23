@@ -1,4 +1,4 @@
-## Step 1: Create a New Project
+## 📝 Step 1: Create a New Project
 
 Open terminal (or Visual Studio)
 
@@ -7,7 +7,7 @@ dotnet new webapi -n CrudDemo
 cd CrudDemo
 ```
 
-## Step 2: Add EF Core & SQLite
+## 📝 Step 2: Add EF Core & SQLite
 
 Install the required packages
 
@@ -15,6 +15,8 @@ Install the required packages
 dotnet add package Microsoft.EntityFrameworkCore
 dotnet add package Microsoft.EntityFrameworkCore.Sqlite
 dotnet add package Microsoft.EntityFrameworkCore.Tools
+dotnet add package Swashbuckle.AspNetCore
+dotnet tool install --global dotnet-ef
 ```
 
 ### - What is EF Core?
@@ -33,6 +35,35 @@ A **database provider** for EF Core. EF Core itself is database-agnostic — it 
 
 This provides **command-line tools** to manage EF Core — mainly migrations and database updates.
 
-## Step 3: Create the Model
+## 📝 Step 3: Create the Model
 
 👉 Inside `Models` folder, create `Product.cs`:
+
+## 📝 Step 4: Setup the Database Context
+
+👉 Inside `Data` folder, create `AppDbContext.cs`:
+
+## 📝 Step 5: Configure Services
+
+👉 Open `Program.cs` and update:
+
+## 📝 Step 6: Create the CRUD Controller
+
+👉 Inside `Controllers` folder, create `ProductsController.cs`:
+
+## 📝 Step 7: Create Datebase
+
+Run migrations & create database;
+
+```bash
+dotnet ef migrations add InitialCreate
+dotnet ef database update
+```
+
+## 📝 Step 8: Run the Project
+
+Start your project:
+
+```bash
+dotnet run
+```
